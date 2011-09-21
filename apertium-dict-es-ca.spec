@@ -2,14 +2,12 @@ Summary:	Spanish-Catalan language pair for Apertium
 Summary(pl.UTF-8):	Para języków hiszpański-kataloński dla Apertium
 %define	lpair	es-ca
 Name:		apertium-dict-%{lpair}
-Version:	1.2.0
+Version:	1.2.1
 Release:	1
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://downloads.sourceforge.net/apertium/apertium-%{lpair}-%{version}.tar.gz
-# Source0-md5:	0cc9676a152947adf703ec81b67654bf
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-apertium32.patch
+# Source0-md5:	31f0195404dc84c7ea4002522f25d569
 URL:		http://www.apertium.org/
 BuildRequires:	apertium-devel >= 3.2.0
 BuildRequires:	autoconf >= 2.52
@@ -32,8 +30,6 @@ oznaczania części mowy w obu językach.
 
 %prep
 %setup -q -n apertium-%{lpair}-%{version}
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__aclocal}
